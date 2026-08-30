@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,#ffd6e7,#fff0f6,#fce4ec);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 750px;
+}
+
+.small-text {
+    font-size: 17px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    animation: fadeDown 1s ease forwards;
+}
+
+.hero h1 {
+    font-size: 78px;
+    margin-bottom: 5px;
+    animation: titleShow 1.2s ease forwards;
+}
+
+.hero h2 {
+    font-size: 70px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg,#111,#ff4f78,#111);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleShow 1.2s ease forwards, gradientMove 4s linear infinite;
+}
+
+.hero-message {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.surprise-btn {
+    border: none;
+    padding: 17px 35px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #111;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: buttonAppear 1s ease forwards, pulse 2s infinite;
+    transition: 0.3s;
+}
+
+.surprise-btn:hover {
+    transform: scale(1.08);
+}
+
+.surprise-btn::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: -80px;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.heart {
+    position: absolute;
+    bottom: -40px;
+    animation: floatHeart 6s linear forwards;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleShow {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes buttonAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+@keyframes pulse {
+    0%,100% {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    50% {
+        box-shadow: 0 10px 40px rgba(255,70,120,0.5);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -80px;
+    }
+
+    40% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero-message {
+        font-size: 17px;
+    }
+
+    .small-text {
+        font-size: 13px;
+    }
+
+    .surprise-btn {
+        font-size: 16px;
+        padding: 15px 28px;
+    }
+}
