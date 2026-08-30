@@ -1,7 +1,4 @@
-/* =========================================
-SURPRISE PAGE
-EASHA BIRTHDAY WEBSITE
-========================================= */
+
 
 * {
   box-sizing: border-box;
@@ -23,9 +20,6 @@ font-family: "Poppins", "Noto Sans Bengali", sans-serif;
 display: none;
 }
 
-/* =========================================
-COMMON
-========================================= */
 
 .surprise-intro,
 .surprise-section,
@@ -65,9 +59,7 @@ position: relative;
 z-index: 5;
 }
 
-/* =========================================
-GLOBAL OLD HEARTS
-========================================= */
+
 
 body > .hearts {
 position: fixed;
@@ -76,11 +68,7 @@ pointer-events: none;
 z-index: 1;
 }
 
-/* =========================================
 
-1. SURPRISE INTRO
-   Floating hearts + glowing background
-   ========================================= */
 
 .surprise-intro {
 display: flex;
@@ -205,10 +193,7 @@ background-position: 200% center;
 }
 }
 
-/* =========================================
-2. MESSAGE SECTION
-Falling hearts
-========================================= */
+
 
 .surprise-section {
 display: flex;
@@ -275,10 +260,7 @@ to {
 
 }
 
-/* =========================================
-3. MEMORIES
-Floating particles
-========================================= */
+
 
 .memories-section {
 display: flex;
@@ -385,10 +367,7 @@ transition: .5s ease;
 transform: scale(1.08);
 }
 
-/* =========================================
-4. SPECIAL SECTION
-Glowing bubbles
-========================================= */
+
 
 .special-section {
 display: flex;
@@ -524,10 +503,7 @@ transform: translateY(0);
 
 }
 
-/* =========================================
-5. JOURNEY
-Moving stars + timeline glow
-========================================= */
+
 
 .journey-section {
 padding: 110px 20px;
@@ -687,10 +663,6 @@ box-shadow:
 
 }
 
-/* =========================================
-6. FINAL GIFT
-Magical background
-========================================= */
 
 .final-section {
 display: flex;
@@ -738,9 +710,7 @@ color: #dfd2e4;
 line-height: 1.8;
 }
 
-/* =========================================
-GIFT BOX
-========================================= */
+
 
 .gift-box {
 position: relative;
@@ -849,9 +819,7 @@ to {
 
 }
 
-/* =========================================
-FINAL MESSAGE
-========================================= */
+
 
 .final-message {
 display: none;
@@ -921,9 +889,7 @@ transform: scale(1);
 
 }
 
-/* =========================================
-RESPONSIVE
-========================================= */
+
 
 @media (max-width: 900px) {
 
@@ -999,9 +965,6 @@ RESPONSIVE
 
 }
 
-/* =========================================
-REDUCED MOTION
-========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1016,9 +979,7 @@ REDUCED MOTION
 
 
 }
-/* =========================================
-BIRTHDAY CAKE
-========================================= */
+
 
 .birthday-cake {
 position: relative;
@@ -1031,9 +992,6 @@ transform: translateY(100px);
 opacity: 0;
 }
 
-/* =========================================
-CAKE PLATE
-========================================= */
 
 .cake-plate {
 position: absolute;
@@ -1053,9 +1011,7 @@ box-shadow:
 0 5px 20px rgba(255, 255, 255, .25);
 }
 
-/* =========================================
-BOTTOM CAKE
-========================================= */
+
 
 .cake-bottom {
 position: absolute;
@@ -1076,9 +1032,7 @@ inset 0 -10px 0 rgba(0, 0, 0, .08),
 0 10px 30px rgba(255, 66, 150, .25);
 }
 
-/* =========================================
-MIDDLE CAKE
-========================================= */
+
 
 .cake-middle {
 position: absolute;
@@ -1120,9 +1074,7 @@ box-shadow:
 0 5px 20px rgba(255, 143, 189, .35);
 }
 
-/* =========================================
-CAKE CREAM
-========================================= */
+
 
 .cake-top::before {
 content: "";
@@ -1150,9 +1102,7 @@ transparent 9px
 );
 }
 
-/* =========================================
-CANDLES
-========================================= */
+
 
 .cake-candle {
 position: absolute;
@@ -1186,9 +1136,7 @@ transform: translateX(-50%);
 right: 72px;
 }
 
-/* =========================================
-FLAME
-========================================= */
+
 
 .flame {
 position: absolute;
@@ -1212,9 +1160,7 @@ animation-delay: .2s;
 animation-delay: .4s;
 }
 
-/* =========================================
-CAKE APPEAR
-========================================= */
+
 
 @keyframes cakeAppear {
 
@@ -1243,9 +1189,7 @@ CAKE APPEAR
 
 }
 
-/* =========================================
-CAKE FLOAT
-========================================= */
+
 
 @keyframes cakeFloat {
 
@@ -1262,9 +1206,7 @@ CAKE FLOAT
 
 }
 
-/* =========================================
-CANDLE FLAME
-========================================= */
+
 
 @keyframes flameFlicker {
 
@@ -1296,9 +1238,7 @@ CANDLE FLAME
 
 }
 
-/* =========================================
-MOBILE CAKE
-========================================= */
+
 
 @media (max-width: 600px) {
 

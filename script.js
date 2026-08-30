@@ -1,19 +1,10 @@
-/* =========================================
-EASHA BIRTHDAY SURPRISE
-SCRIPT.JS
-========================================= */
 
-/* =========================================
-LANDING PAGE
-========================================= */
 
 function goToSurprise() {
 window.location.href = "surprise.html";
 }
 
-/* =========================================
-UNLOCK SURPRISE
-========================================= */
+
 
 function revealSurprise() {
 
@@ -57,9 +48,6 @@ setTimeout(function() {
 
 }
 
-/* =========================================
-GIFT
-========================================= */
 
 function openGift() {
 
@@ -113,9 +101,6 @@ setTimeout(function() {
 
 }
 
-/* =========================================
-PAGE LOAD
-========================================= */
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -153,11 +138,7 @@ createFinalParticles();
 
 }
 
-/* =========================================
 
-1. INTRO PARTICLES
-   Hearts
-   ========================================= */
 
 function createIntroParticles() {
 
@@ -204,10 +185,7 @@ createParticles(
 
 }
 
-/* =========================================
-3. MEMORY PARTICLES
-Light particles
-========================================= */
+
 
 function createMemoryParticles() {
 
@@ -253,10 +231,7 @@ createParticles(
 
 }
 
-/* =========================================
-5. JOURNEY PARTICLES
-Stars
-========================================= */
+
 
 function createJourneyParticles() {
 
@@ -278,10 +253,7 @@ createParticles(
 
 }
 
-/* =========================================
-6. FINAL PARTICLES
-Magical sparkles
-========================================= */
+
 
 function createFinalParticles() {
 
@@ -303,9 +275,7 @@ createParticles(
 
 }
 
-/* =========================================
-PARTICLE CREATOR
-========================================= */
+
 
 function createParticles(
 section,
@@ -374,14 +344,12 @@ for (let i = 0; i < amount; i++) {
 
 }
 
-/* =========================================
-CONTINUOUS ANIMATIONS
-========================================= */
+
 
 const runningStyle =
 document.createElement("style");
 
-// ======== ঠিক করা হলো (ব্যাকটিক ` ` চিহ্ন যোগ করা) ========
+
 runningStyle.innerHTML = `
 
 .intro-particle,
@@ -485,9 +453,7 @@ animation:
 
 }
 
-/* =========================================
-ANIMATION KEYFRAMES
-========================================= */
+
 
 @keyframes introRunning {
 
@@ -640,6 +606,6 @@ ANIMATION KEYFRAMES
 
 }
 
-`; // ← ব্যাকটিক শেষ হলো
+`; 
 
 document.head.appendChild(runningStyle);
