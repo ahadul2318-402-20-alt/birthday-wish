@@ -8,44 +8,47 @@ window.location.href = "surprise.html";
 
 function revealSurprise() {
 
+    const content = document.getElementById("birthdayContent");
+    const music = document.getElementById("birthdayMusic");
 
-const content = document.getElementById("birthdayContent");
-
-if (!content) {
-    return;
-}
-
-content.classList.remove("hidden-content");
-
-content.style.opacity = "0";
-content.style.transform = "translateY(50px)";
-
-setTimeout(function() {
-
-    content.style.transition =
-        "opacity 1.2s ease, transform 1.2s ease";
-
-    content.style.opacity = "1";
-    content.style.transform = "translateY(0)";
-
-}, 50);
-
-setTimeout(function() {
-
-    const messageSection =
-        document.querySelector(".surprise-section");
-
-    if (messageSection) {
-
-        messageSection.scrollIntoView({
-            behavior: "smooth"
-        });
-
+    if (!content) {
+        return;
     }
 
-}, 700);
+    content.classList.remove("hidden-content");
 
+    content.style.opacity = "0";
+    content.style.transform = "translateY(50px)";
 
+    setTimeout(function() {
+
+        content.style.transition =
+            "opacity 1.2s ease, transform 1.2s ease";
+
+        content.style.opacity = "1";
+        content.style.transform = "translateY(0)";
+
+    }, 50);
+
+    if (music) {
+        music.volume = 0.5;
+        music.play().catch(function(error) {
+            console.log("Music could not start:", error);
+        });
+    }
+
+    setTimeout(function() {
+
+        const messageSection =
+            document.querySelector(".surprise-section");
+
+        if (messageSection) {
+            messageSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    }, 700);
 }
 
 
