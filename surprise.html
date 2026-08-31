@@ -358,109 +358,201 @@
 
         <!-- Final Gift -->
 
-        <section class="final-section">
-
-            <div class="final-content">
-
-                <p class="small-text">
-                    One Last Surprise 🎁
-                </p>
-
-                <h2>
-                    Something Special For You
-                </h2>
-
-                <p class="final-intro">
-                    এতক্ষণ website-এর মধ্যে অনেক কথা ছিল...
-                    কিন্তু শেষ surprise-টা তোমার জন্য। ❤️
-                </p>
-
-
-                <div class="birthday-cake">
-
-
-<div class="cake-candle candle-one">
-    <span class="flame">🔥</span>
-</div>
-
-<div class="cake-candle candle-two">
-    <span class="flame">🔥</span>
-</div>
-
-<div class="cake-candle candle-three">
-    <span class="flame">🔥</span>
-</div>
-
-<div class="cake-top"></div>
-
-<div class="cake-middle"></div>
-
-<div class="cake-bottom"></div>
-
-<div class="cake-plate"></div>
-```
-
-</div>
-
-<div class="gift-box" onclick="openGift()">
-
-```
-<div class="gift-lid"></div>
-
-<div class="gift-body">
-    <div class="gift-ribbon"></div>
-</div>
-
-<div class="gift-bow">
-    🎀
-</div>
-
-
-</div>
+        <!-- =========================================
+     FINAL CINEMATIC SURPRISE
+========================================= -->
 
 
 
-                <p class="gift-hint">
-                    Click the gift 🎁
-                </p>
+<section class="final-section">
 
 
-                <div class="final-message" id="finalMessage">
+<div class="final-content">
 
-                    <div class="message-heart">
-                        ❤️
-                    </div>
+    <p class="small-text">
+        One Last Surprise 🎁
+    </p>
 
-                    <h3>
-                        Thank You , Easha!
-                    </h3>
+    <h2>
+        Something Special For You
+    </h2>
 
-                    <p>
-                        তোমার জীবনের প্রতিটা দিন হোক
-                        আজকের দিনের মতোই সুন্দর। ✨
-                    </p>
+    <p class="final-intro">
+        এতক্ষণ website-এর মধ্যে অনেক কথা ছিল...
+        কিন্তু শেষ surprise-টা তোমার জন্য। ❤️
+    </p>
 
-                    <p>
-                        তোমার সব স্বপ্ন পূরণ হোক,
-                        সবসময় হাসিখুশি থেকো,
-                        আর জীবনে অনেক অনেক সুন্দর মুহূর্ত আসুক,
-                        জিবনের সকল পরিস্থিতে যেন পাশে থাকতে পারি।💖
-                    </p>
 
-                    <p>
-                        This little website is just a small way
-                        of saying how special you are. ❤️
-                    </p>
+    <!-- GIFT -->
 
-                    <h4>
-                        Happy Birthday Lokkhi! 🎂✨
-                    </h4>
+    <div class="gift-area">
 
+        <div class="gift-box" onclick="openGift()">
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-body">
+                <div class="gift-ribbon"></div>
+            </div>
+
+            <div class="gift-bow">
+                🎀
+            </div>
+
+        </div>
+
+        <p class="gift-hint">
+            ✨ Click the gift to open your surprise 🎁 ✨
+        </p>
+
+    </div>
+
+
+    <!-- HIDDEN SURPRISE -->
+
+    <div
+        class="final-surprise-content"
+        id="finalSurpriseContent"
+    >
+
+        <!-- PHOTO SLIDESHOW -->
+
+        <div class="memory-showcase">
+
+            <div class="memory-slide active">
+
+                <img
+                    src="images/photo1.jpeg"
+                    alt="Memory"
+                >
+
+                <div class="memory-caption">
+                    A Beautiful Memory ❤️
                 </div>
 
             </div>
 
-        </section>
+
+            <div class="memory-slide">
+
+                <img
+                    src="images/photo2.jpeg"
+                    alt="Memory"
+                >
+
+                <div class="memory-caption">
+                    A Moment To Remember ✨
+                </div>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img
+                    src="images/photo3.jpeg"
+                    alt="Memory"
+                >
+
+                <div class="memory-caption">
+                    Little Moments 💖
+                </div>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img
+                    src="images/photo4.jpeg"
+                    alt="Memory"
+                >
+
+                <div class="memory-caption">
+                    Forever Memory 🌸
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIDEO -->
+
+        <div class="birthday-video">
+
+            <p class="video-title">
+                A Little Video For You 🎬❤️
+            </p>
+
+            <div class="video-container">
+
+                <video
+                    id="birthdayVideo"
+                    controls
+                    playsinline
+                >
+
+                    <source
+                        src="video/birthday.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL MESSAGE -->
+
+        <div
+            class="final-message"
+            id="finalMessage"
+        >
+
+            <div class="message-heart">
+                ❤️
+            </div>
+
+            <h3>
+                Happy Birthday, Easha!
+            </h3>
+
+            <p>
+                তোমার জীবনের প্রতিটা দিন হোক
+                আজকের দিনের মতোই সুন্দর। ✨
+            </p>
+
+            <p>
+                তোমার সব স্বপ্ন পূরণ হোক,
+                সবসময় হাসিখুশি থেকো,
+                আর জীবনে অনেক অনেক সুন্দর মুহূর্ত আসুক,
+                জিবনের সকল পরিস্থিতে যেন পাশে থাকতে পারি। 💖
+            </p>
+
+            <p>
+                This little website is just a small way
+                of saying how special you are. ❤️
+            </p>
+
+            <h4>
+                Happy Birthday Once Again! 🎂✨
+            </h4>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
 
     </div>
 

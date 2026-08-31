@@ -45,7 +45,9 @@ body {
     margin-bottom: 25px;
     background: linear-gradient(90deg,#111,#ff4f78,#111);
     background-size: 200%;
+    background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
     animation: titleShow 1.2s ease forwards, gradientMove 4s linear infinite;
 }

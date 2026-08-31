@@ -20,6 +20,14 @@ function revealSurprise() {
     content.style.opacity = "0";
     content.style.transform = "translateY(50px)";
 
+    if (music) {
+        music.volume = 0.5;
+
+        music.play().catch(function(error) {
+            console.log("Music error:", error);
+        });
+    }
+
     setTimeout(function() {
 
         content.style.transition =
@@ -30,35 +38,34 @@ function revealSurprise() {
 
     }, 50);
 
-    if (music) {
-        music.volume = 0.5;
-        music.play().catch(function(error) {
-            console.log("Music could not start:", error);
-        });
-    }
-
     setTimeout(function() {
 
         const messageSection =
             document.querySelector(".surprise-section");
 
         if (messageSection) {
+
             messageSection.scrollIntoView({
                 behavior: "smooth"
             });
+
         }
 
     }, 700);
+
 }
 
 
 function openGift() {
 
 
-const giftBox = document.querySelector(".gift-box");
-const finalMessage = document.getElementById("finalMessage");
+const giftBox =
+    document.querySelector(".gift-box");
 
-if (!giftBox || !finalMessage) {
+const finalSurprise =
+    document.getElementById("finalSurpriseContent");
+
+if (!giftBox || !finalSurprise) {
     return;
 }
 
@@ -68,41 +75,50 @@ if (giftBox.classList.contains("opened")) {
 
 giftBox.classList.add("opened");
 
+
 const giftLid =
     giftBox.querySelector(".gift-lid");
 
 const giftBow =
     giftBox.querySelector(".gift-bow");
 
+
 if (giftLid) {
 
     giftLid.style.transform =
-        "translateY(-45px) rotate(-8deg)";
+        "translateX(-50%) translateY(-45px) rotate(-8deg)";
 
 }
+
 
 if (giftBow) {
 
     giftBow.style.transform =
-        "translateX(-50%) translateY(-55px) scale(1.2)";
+        "translateX(-50%) translateY(-60px) scale(1.2)";
 
     giftBow.style.opacity = "0";
 
 }
 
+
 setTimeout(function() {
 
-    finalMessage.classList.add("show");
+    finalSurprise.classList.add("show");
 
-    finalMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+    setTimeout(function() {
 
-}, 700);
+        finalSurprise.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 300);
+
+}, 900);
 
 
 }
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -612,3 +628,125 @@ animation:
 `; 
 
 document.head.appendChild(runningStyle);
+
+/* =========================================
+MEMORY SLIDESHOW
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+startMemorySlideshow();
+
+
+});
+
+function startMemorySlideshow() {
+
+
+const slides =
+    document.querySelectorAll(".memory-slide");
+
+if (!slides.length) {
+    return;
+}
+
+let currentSlide = 0;
+
+
+setInterval(function() {
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+
+}, 4000);
+
+
+}
+
+/* =========================================
+SHOW FINAL MESSAGE AFTER VIDEO
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+const video =
+    document.getElementById("birthdayVideo");
+
+const finalMessage =
+    document.getElementById("finalMessage");
+
+
+if (!video || !finalMessage) {
+    return;
+}
+
+
+video.addEventListener("ended", function() {
+
+    finalMessage.classList.add("show");
+
+    setTimeout(function() {
+
+        finalMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }, 500);
+
+});
+
+
+});
+document.addEventListener("DOMContentLoaded", function() {
+
+
+const music =
+    document.getElementById("birthdayMusic");
+
+const video =
+    document.getElementById("birthdayVideo");
+
+if (!video) {
+    return;
+}
+
+video.addEventListener("play", function() {
+
+    if (music) {
+        music.pause();
+    }
+
+});
+
+video.addEventListener("pause", function() {
+
+    if (music) {
+        music.play().catch(function(error) {
+            console.log("Music play error:", error);
+        });
+    }
+
+});
+
+video.addEventListener("ended", function() {
+
+    if (music) {
+        music.play().catch(function(error) {
+            console.log("Music play error:", error);
+        });
+    }
+
+});
+
+
+});
